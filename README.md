@@ -5,17 +5,17 @@ A simple create-read-update-delete (CRUD) web application using Spring Boot fram
 **Screenshot** <br/>
 - Book List <br/>
 <p float="left">
-  <img src="https://github.com/muhammad-fachrizal/booklist/blob/main/screenshot/book_list.png" width="50%" height="50%"> <br/>
+  <img src="https://github.com/muhammad-fachrizal/booklist/blob/main/screenshot/book_list.png" > <br/>
 </p>
 
 - Form Add Book <br/>
 <p float="left">
-  <img src="https://github.com/muhammad-fachrizal/booklist/blob/main/screenshot/form_add_book_1.png" width="50%" height="40%"> 
-  <img src="https://github.com/muhammad-fachrizal/booklist/blob/main/screenshot/form_add_book_2.png" width="40%" height="40%"> 
+  <img src="https://github.com/muhammad-fachrizal/booklist/blob/main/screenshot/form_add_book_1.png" > 
+  <img src="https://github.com/muhammad-fachrizal/booklist/blob/main/screenshot/form_add_book_2.png" > 
 </p>
 
 - Form Update Book <br/>
 <p float="left">
-  <img src="https://github.com/muhammad-fachrizal/booklist/blob/main/screenshot/form_update_book_1.png" width="40%" height="40%"> 
-  <img src="https://github.com/muhammad-fachrizal/booklist/blob/main/screenshot/form_update_book_2.png" width="44%" height="40%"> 
+  <img src="https://github.com/muhammad-fachrizal/booklist/blob/main/screenshot/form_update_book_1.png" > 
+  <img src="https://github.com/muhammad-fachrizal/booklist/blob/main/screenshot/form_update_book_2.png" > 
 </p>
