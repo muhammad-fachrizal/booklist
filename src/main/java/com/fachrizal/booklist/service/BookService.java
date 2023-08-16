@@ -1,8 +1,8 @@
 package com.fachrizal.booklist.service;
 
-import com.fachrizal.booklist.model.Book;
-
 import java.util.List;
+
+import com.fachrizal.booklist.entity.Book;
 
 public interface BookService {
     List<Book> getAllBooks();

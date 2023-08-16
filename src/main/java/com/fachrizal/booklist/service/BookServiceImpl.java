@@ -1,6 +1,6 @@
 package com.fachrizal.booklist.service;
 
-import com.fachrizal.booklist.model.Book;
+import com.fachrizal.booklist.entity.Book;
 import com.fachrizal.booklist.repository.BookRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;

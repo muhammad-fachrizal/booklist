@@ -1,8 +1,9 @@
 package com.fachrizal.booklist.repository;
 
-import com.fachrizal.booklist.model.Book;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
+
+import com.fachrizal.booklist.entity.Book;
 
 @Repository
 public interface BookRepository extends JpaRepository<Book, Long> {

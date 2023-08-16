@@ -13,7 +13,7 @@ import static org.springframework.test.web.servlet.request.MockMvcRequestBuilder
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.*;
 
 @ExtendWith(SpringExtension.class)
-@SpringBootTest(classes = BooklistApplication.class)
+@SpringBootTest(classes = BookListApplication.class)
 @WebAppConfiguration
 public class MockMvcWebTest {
     @Autowired
@@ -30,10 +30,9 @@ public class MockMvcWebTest {
     @Test
     public void homePage() throws Exception {
         setupMockMvc();
-        mockMvc.perform(get("/list"))
+        mockMvc.perform(get("/bookList"))
                 .andExpect(status().isOk())
-                .andExpect(view().name("list"))
+                .andExpect(view().name("book-list"))
                 .andExpect(model().attributeExists("books"));
-                //.andExpect(model().attribute("books", is(empty())));
     }
 }

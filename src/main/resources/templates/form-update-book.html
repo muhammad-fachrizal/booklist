@@ -4,23 +4,27 @@
       xmlns:th="http://www.thymeleaf.org">
 <head>
     <meta charset="UTF-8">
-    <title>Update Book</title>
+    <title>Form Update Book</title>
     <link rel="stylesheet" th:href="@{/css/style.css}">
 </head>
 <body>
-<h2>Add a book</h2>
-    <form method="POST" th:action="@{/saveBook}" th:object="${book}">
+    <h2>Update Book Details</h2>
+    <form method="POST" th:action="@{/bookList/formUpdateBook/{id}(id=${book.id})}" th:object="${book}">
         <input type="hidden" th:field="${book.id}" />
         <label for="title">Title:</label>
-        <input type="text" id="title" name="title" size="50" th:value="${book.title}"><br/>
+        <input type="text" id="title" name="title" size="50" th:value="${book.title}"  th:field="${book.title}">
+        <span th:if="${#fields.hasErrors('title')}" th:errors="*{title}" class="errorText"></span> <br/>
         <label for="authorName">Author:</label>
-        <input type="text" id="authorName" name="authorName" size="50" th:value="${book.authorName}"><br/>
+        <input type="text" id="authorName" name="authorName" size="50" th:value="${book.authorName}" th:field="${book.authorName}">
+        <span th:if="${#fields.hasErrors('authorName')}" th:errors="*{authorName}" class="errorText"></span> <br/>
         <label for="isbn">ISBN:</label>
-        <input type="number" id="isbn" name="isbn" size="15" th:value="${book.isbn}"><br/>
+        <input type="text" id="isbn" name="isbn" size="15" th:value="${book.isbn}" th:field="${book.isbn}">
+        <span th:if="${#fields.hasErrors('isbn')}" th:errors="*{isbn}" class="errorText"></span> <br/>
         <label for="description">Description:</label><br/>
-        <textarea id="description" name="description" cols="80" rows="5" th:text="${book.description}"></textarea><br/>
-        <input type="submit" th:value="Udate">
-        <input type="button" onclick="location.href='/list'" th:value="Cancel">
+        <textarea id="description" name="description" cols="80" rows="5" th:text="${book.description}" th:field="${book.description}"></textarea>
+        <span th:if="${#fields.hasErrors('description')}" th:errors="*{description}" class="errorText"></span> <br/>
+        <input type="submit" name="submitButton" th:value="Update">
+        <input type="button" onclick="location.href='/bookList'" th:value="Cancel">
     </form>
 </body>
 </html>

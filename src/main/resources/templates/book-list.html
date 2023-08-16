@@ -17,13 +17,13 @@
                 (ISBN: <span th:text="${book.isbn}">ISBN</span>)
             </dt>
             <dd class="bookDescription">
-                <span th:if="${book.description}"
+                <span th:if="${book.description}" style="white-space: pre-line"
                         th:text="${book.description}">Description</span>
                 <span th:if="${book.description eq null}">
                         No description available</span>
                 <div>
-                    <a th:href="@{/formUpdateBook/{id}(id=${book.id})}"><button>Update</button></a>
-                    <a th:href="@{/deleteBook/{id}(id=${book.id})}"><button>Delete</button></a>
+                    <a th:href="@{/bookList/formUpdateBook/{id}(id=${book.id})}"><button>Update</button></a>
+                    <a th:href="@{/bookList/deleteBook/{id}(id=${book.id})}"><button>Delete</button></a>
                 </div>
             </dd>
         </dl>
@@ -31,6 +31,6 @@
     <div th:if="${#lists.isEmpty(books)}">
         <p>You have no books in your book list</p>
     </div>
-    <a th:href="@{/formAddBook}"><button>Add Book</button></a>
+    <a th:href="@{/bookList/formAddBook}"><button>Add Book</button></a>
 </body>
 </html>

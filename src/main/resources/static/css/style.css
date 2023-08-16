@@ -16,3 +16,6 @@ label {
     font-weight: bold;
     text-align: center;
 }
+.errorText {
+    color: red;
+}
